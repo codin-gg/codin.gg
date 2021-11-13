@@ -1,0 +1,55 @@
+# FIXME
+# - [x] Do we actually need artifacts here?
+#    -> We have to remember to clean up the storage though
+# - [x] Why don't we just build and deploy locally?
+#    -> So that we can rollback without having to rebuild
+# - [x] Use standard npm ci and npm build
+# - [ ] Make sure commit messages are correct
+# - [ ] Make sure deploys to pages correctly
+name: Github Pages
+on:
+  push:
+    branches: [master]
+jobs:
+  artifacts-prune:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+    - uses: c-hive/gha-remove-artifacts@v1
+      with:
+        age: '60 minutes'
+        skip-recent: 2 # might be required for rollback
+  npm-build:
+    runs-on: ubuntu-latest
+    needs: artifacts-prune
+    steps:
+    - uses: actions/checkout@master
+      with:
+        ref: refs/heads/master
+    - uses: actions/setup-node@master
+      with:
+        node-version: '16'
+        cache: 'npm'
+    - run: |
+        npm ci
+        npm run build --if-present
+    - uses: actions/upload-artifact@v2
+      with:
+        name: npm-build@${{ github.sha }}
+        path: dist
+  pages-deploy:
+    runs-on: ubuntu-latest
+    needs: npm-build
+    steps:
+    - uses: actions/download-artifact@v2
+      with:
+        name: npm-build@${{ github.sha }}
+    - uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.github_token }}
+        publish_dir: ${{ github.workspace }}
+        enable_jekyll: false
+        user_name: ${{ github.actor }}
+        user_email: ${{ github.actor }}@users.noreply.github.com
+        cname: ${{ github.event.repository.name }}
+        commit_message: ${{ github.event.head_commit.message }}

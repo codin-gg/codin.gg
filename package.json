@@ -1,0 +1,27 @@
+{
+  "name": "codin.gg",
+  "description": "https://codin.gg",
+  "author": "codin.gg <hey@codin.gg> (https://github.com/codin-gg)",
+  "version": "1.0.0",
+  "private": true,
+  "source": "web/index.pug",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.0.1",
+    "@parcel/transformer-stylus": "^2.0.1",
+    "parcel": "latest"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codin-gg/codin.gg/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codin-gg/codin.gg.git"
+  },
+  "homepage": "https://codin.gg"
+}

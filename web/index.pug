@@ -1,0 +1,39 @@
+mixin google-analytics(id)
+    script(src=`https://www.googletagmanager.com/gtag/js?id=${id}` async)
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EWJKY6DC2H');
+doctype html
+html(lang=lang)
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+    link(rel='stylesheet' href='index.styl')
+    title=title
+    +google-analytics('G-EWJKY6DC2H')
+  body
+    h1(data-shadow='codin’') codin’
+      span gg
+    h2 — COMIN’ SOON —
+    //- github
+    //- twitter
+    //- tiktok
+    //- coinbase
+    //- nav
+    //-   a(href='#tech') fun
+    //-   a(href='#tech') tech
+    //-   a(href='#academy') academy
+    //-   a(href='#xyz') xyz
+    //- section(role='funding')
+    //-   h2
+    //-     a(href='funding.pug') Funding
+    //-   p {{ i18n.funding }}
+    //-     a(href='#academy')
+
+
+
