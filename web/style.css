@@ -1,0 +1,33 @@
+:root {
+  --bg-color: #E2E8E4;
+  --text-color: #2B3331;
+
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", Monaco, Consolas, "Fira Code", monospace;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  padding: 3vh 4vw;
+  margin: 0;
+  display: flex;
+  min-height: 94vh;
+  align-items: center;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+a[href^="mailto:"][data-email] {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}

@@ -1,6 +1,7 @@
 {
   "locals": {
     "title": "codin.gg",
+    "email": "hey@codin.gg",
     "base": "https://codin.gg"
   }
 }
