@@ -1,15 +1,35 @@
-mixin email(email)
-  a(href="mailto:" data-email=btoa(email) onclick="this.href='mailto:' + atob(this.dataset.email)")=[...email].reverse().join('')
+extends layout/page
 
-doctype html
-html(lang="en")
-  head
-    title=title
-    meta(charset="utf-8")
-    link(rel="icon" type="image/png" href="hacker.png")
-    link(rel="stylesheet" href="style.css")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  body
-    h1 COMING SOON
+block body
+  main.hero
+
+    .availability-badge
+      .badge-dot.badge-green
+      | BUSY | Currently enrolling for Q4 2026
+
+    h1 Software that outlives the hype cycle!
       br
-      +email(email)
+      span.marker Minus the agency bloat...
+    br
+    br
+    p
+      strong We are an invite-only collective of independent senior engineers.
+
+    p
+      | We build software that is &nbsp;
+      a(href="#simple") Simple
+      | ,&nbsp;
+      a(href="#durable") Durable
+      | , and&nbsp;
+      a(href="#durable") Reliable
+      | .
+    p No sales pitches. No endless billing cycles.
+    p We assemble the skills, execute the project, and get out of your way.
+    br
+    br
+    br
+    br
+    a.cta(href="mailto:hey@codin.gg") hey@codin.gg
+    br
+    br
+    br
