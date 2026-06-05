@@ -2,34 +2,22 @@ extends layout/page
 
 block body
   main.hero
+    .badge
+      span.badge-dot
+      | BUSY — Currently enrolling for Q4 2026
 
-    .availability-badge
-      .badge-dot.badge-green
-      | BUSY | Currently enrolling Q4 2026
+    h1 Software that outlives the hype cycle.
 
-    h1 Software that outlives the hype cycle!
-      br
-      span.marker Minus the agency bloat...
-    br
-    br
-    p
-      strong We are an invite-only collective of independent senior engineers.
+    .marker-wrap
+      span.marker Minus the agency bloat…
 
-    p
-      | We build software that is &nbsp;
-      a(href="#simple") Simple
-      | ,&nbsp;
-      a(href="#durable") Durable
-      | , and&nbsp;
-      a(href="#durable") Reliable
-      | .
-    p No sales pitches. No endless billing cycles.
-    p We assemble the skills, execute the project, and get out of your way.
-    br
-    br
-    br
-    br
-    a.cta(href="mailto:hey@codin.gg") hey@codin.gg
-    br
-    br
-    br
+    .hero-text
+      p
+        strong We are an invite-only collective of independent senior engineers.
+
+      p We build software that is Simple, Durable, and Reliable. No sales pitches. No endless billing cycles.<br>We assemble the skills, execute the project, and get out of your way.
+
+      .cta-wrap
+        a.cta(href="mailto:hey@codin.gg")
+          | hey@codin.gg
+          span.cta-arrow →
