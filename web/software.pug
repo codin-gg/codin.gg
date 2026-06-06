@@ -1,0 +1,84 @@
+extends layout/page
+
+block body
+  main
+    h1 × Software Development
+    p.intro We take on a limited number of projects at any given time. We believe that focus and deep time management are the keys to shipping state-of-the-art software.
+    p
+      strong We don't sell hours; we sell outcomes.&#32;
+      | We partner with startups and scale-ups through three primary engagements:
+    hr
+    section.flex-row
+      img(src="https://cdn-icons-png.flaticon.com/512/4245/4245774.png" alt="rapid delivering")
+      h3 Rapid Delivery
+      p Startups need speed, but "fast" shouldn't mean unscalable spaghetti code. We help founders validate their market by delivering rapid prototypes and MVPs. We build incredibly fast, but we enforce clean design boundaries so the foundation won't collapse when you acquire real users.
+
+    section.flex-row
+      img(src="https://cdn-icons-png.flaticon.com/512/1866/1866747.png" alt="architectural rescue")
+      h3 Architectural Rescue
+      p Sometimes, the MVP works too well, and the technical debt catches up. We get dropped into active projects to untangle failing monoliths, optimize out-of-control API workflows, and migrate fragile codebases into sane, Domain-Driven systems. We fix the architecture, stabilize the platform, and get out of your way.
+
+    section.flex-row
+      img(src="https://cdn-icons-png.flaticon.com/512/923/923343.png" alt="embedded co-creation")
+      h3 Embedded Co-Creation
+      p We don't just throw code over the wall. We embed directly with your engineering team to build the product <strong>with</strong> them. Using practices like Pair Programming and Test-Driven Development (TDD), we upskill your developers on modern architecture while we actively write production code together.
+
+    hr
+    h2 Public Infrastructure
+    p We believe in giving back to the ecosystem that built our careers. When we aren't working on client projects, we build and maintain public goods.
+    blockquote
+      strong Note
+      | We don't maintain a traditional client portfolio; much of our enterprise work is under NDA. Instead, we let our public infrastructure speaks for itself.
+    ul
+      li
+        a(href="#") stun.codin.gg
+        | &#32; – highly available STUN server ensuring reliable NAT traversal for peer-to-peer and decentralized applications.
+      li
+        a(href="#") webrtc.codin.gg
+        | &#32; – lightweight WebSocket signaling broker facilitating direct WebRTC handshakes.
+      li
+        a(href="#") ipfs.codin.gg
+        | &#32; – rate-limited public gateway ensuring censorship-resistant, decentralized web hosting remains accessible to the community.
+      li
+        a(href="#") nostr.codin.gg
+        | &#32; – high-performance relay supporting the growing ecosystem of cryptographic, decentralized social protocols.
+      li
+        a(href="#") mqtt.codin.gg
+        | &#32; – open broker for IoT developers requiring a reliable, low-latency testing ground for hardware telemetry.
+      li
+        a(href="#") analytics.codin.gg
+        | &#32; – strictly cookie-less, GDPR-compliant collector proving that business insights do not require sacrificing user privacy.
+      li
+        a(href="#") finance.codin.gg
+        | &#32; – zero-database cryptocurrency dataset compiled entirely via GitHub Actions. Delivers high-performance JSON, CSV, and XML APIs natively compatible with Google Sheets.
+      li
+        a(href="#") byoc.codin.gg
+        | &#32; – privacy-first progressive web app leveraging WebRTC, WebWorkers, and the Push API to create a self-contained, peer-to-peer messaging alternative inside a single HTML file.
+
+      li
+        strong.muted More services coming soon...
+
+    hr
+    h2 Open Source Ecosystem
+    ul
+      li
+        a(href="#") npmjs.com/org/quecto
+        | &#32; – A collection of zero-dependency Node.js utilities constrained by the "100-Line Kata." Designed to leverage native ECMAScript APIs and keep dependency trees completely flat.
+      li
+        a(href="#") npmjs.com/package/testbump
+        | &#32; – A deterministic semantic versioning engine. No AST parsing or dependency hell—just pure Test-Driven Bumps (TDB) that calculate versions purely based on your test suite contracts.
+      li
+        a(href="#") npmjs.com/package/mlx-node
+        | &#32; – The foundational ecosystem bridging Apple's MLX machine learning framework with Node.js. Run Large Language Models and AI agents directly on Apple Silicon with zero-overhead native bindings.
+      li
+        strong.muted More projects coming soon...
+
+    hr
+    h4 Have a project in mind?
+    p Whether you need to build it or fix it, let's get in touch...
+    .cta-wrap
+      a.cta(href="mailto:hey@codin.gg")
+        | hey@codin.gg
+        span.cta-arrow →
+    br
+    br

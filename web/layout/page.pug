@@ -1,13 +1,19 @@
 doctype html
 html(lang="en")
   head
-    title=title
+    title="codin.gg | " + (filename === "index.pug" ? "home" : filename.substring(0, filename.lastIndexOf('.')))
     meta(charset="utf-8")
     link(rel="icon" type="image/png" href="hacker.png")
+    link(rel="stylesheet" href="typography.css")
+    link(rel="stylesheet" href="animation.css")
     link(rel="stylesheet" href="style.css")
+    link(rel="stylesheet" href="game-of-life.css")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    block head
     script(type="module" src="game-of-life.js")
-  body
+
+    body
     game-of-life(cell-size="5" gap="2" tick-rate="150")
     header
       section
@@ -15,6 +21,7 @@ html(lang="en")
           figure
             img(src="hacker.png")
             figcaption
+              //span.prefix *.
               | codin
               span.suffix .gg
                 .particle.p1
@@ -25,56 +32,20 @@ html(lang="en")
           a.active(href="#") EN
           a(href="#") IT
           a(href="#") DE
-
-      //section
-      //  nav.menu
-      //    a(href="#") ⁄ Home
-      //    a(href="#") ⁄ Identity
-      //    a(href="#") ⁄ Software
-      //    a(href="#") ⁄ Training
-      //    a(href="#") ⁄ Events
-      //    a(href="#") ⁄ Library
+      section
+        nav.menu
+          a(href="index.pug") Home
+          a(href="identity.pug") Identity
+          a(href="software.pug") Software
+          a(href="training.pug") Training
+          a(href="events.pug") Events
+          a(href="library.pug") Library
     block body
-    //footer
-    //  a(href="privacy.pug") Privacy
-    //main.hero
-
-    //  .availability-badge
-    //    .badge-dot.badge-green
-    //    | BUSY | Currently enrolling for Q4 2026
-
-    //  h1 Software that outlives the hype cycle!
-    //    br
-    //    span.marker Minus the agency bloat...
-    //  br
-    //  br
-    //  p
-    //    strong We are an invite-only collective of independent senior engineers.
-
-    //  p
-    //    | We build software that is &nbsp;
-    //    a(href="#simple") Simple
-    //    | ,&nbsp;
-    //    a(href="#durable") Durable
-    //    | , and&nbsp;
-    //    a(href="#durable") Reliable
-    //    | .
-    //  p No sales pitches. No endless billing cycles.
-    //  p We assemble the skills, execute the project, and get out of your way.
-    //  br
-    //  br
-    //  br
-    //  br
-    //  a.cta(href="mailto:hey@codin.gg") hey@codin.gg
-    //  br
-    //  br
-    //  br
-    //  br
     footer
       .footer-legal
         a(href="index.pug") CODIN.GG
-        | &#32; © 2026
-        | IT02763680218
+        | &#32; © 2026 IT02763680218
       .footer-nav
         a(href="privacy.pug") Privacy
+        | &#32; |&#32;
         a(href="//github.com/codin-gg" target="_blank") Github ↗

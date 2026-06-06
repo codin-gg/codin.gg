@@ -1,0 +1,16 @@
+game-of-life {
+  --game-of-life-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 45vw;
+  height: 100vh;
+  z-index: -1;
+  mask-image: linear-gradient(270deg, #000 0%, transparent 100%);
+}
+
+@media (max-width: 900px) {
+  game-of-life {
+    display: none;
+  }
+}

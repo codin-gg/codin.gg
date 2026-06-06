@@ -1,0 +1,26 @@
+[
+  {
+    "title": "The Pragmatic Programmer",
+    "author": "David Thomas, Andrew Hunt",
+    "category": "Craftsmanship",
+    "rating": 5,
+    "notes": "If you only read one book from this list, make it this one. It teaches you how to think like a professional engineer, not just a coder.",
+    "image": "https://covers.openlibrary.org/b/isbn/9780201616224-M.jpg",
+    "readDate": "2021-07-15",
+    "affiliate": {
+      "amazon": "#"
+    }
+  },
+  {
+    "title": "Extreme Programming Explained",
+    "author": "Kent Beck",
+    "category": "Agile & XP",
+    "rating": 5,
+    "notes": "Our entire operational philosophy comes from this book. Embrace Change. Stop doing useless enterprise meetings and focus on tight, high-quality development loops.",
+    "image": "https://covers.openlibrary.org/b/isbn/9780321278654-M.jpg",
+    "readDate": "2013-10-05",
+    "affiliate": {
+      "amazon": "#"
+    }
+  },
+]

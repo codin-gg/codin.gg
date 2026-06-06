@@ -1,0 +1,183 @@
+header,
+main,
+footer {
+  animation: fade-up 0.6s ease both;
+}
+
+main {
+  animation-delay: 0.15s;
+}
+
+footer {
+  animation-delay: 0.3s;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.badge-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.logo .suffix {
+  animation: text-pop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.particle {
+  background-color: var(--accent);
+  opacity: 0;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.p1 {
+  animation: 1s ease-out .6s forwards burst1;
+}
+
+.p2 {
+  animation: 1s ease-out .6s forwards burst2;
+}
+
+.p3 {
+  animation: 1s ease-out .6s forwards burst3;
+}
+
+.p4 {
+  animation: 1s ease-out .6s forwards burst4;
+}
+
+@keyframes text-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes burst1 {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-30px, -30px) scale(0);
+  }
+}
+
+@keyframes burst2 {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(20px, -35px) scale(0);
+  }
+}
+
+@keyframes burst3 {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-35px, 20px) scale(0);
+  }
+}
+
+@keyframes burst4 {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(30px, 25px) scale(0);
+  }
+}
+
+
+.animated-heart {
+  position: relative;
+  display: inline-block;
+  margin-left: 4px;
+  color: #f1c40f;
+}
+
+.animated-heart::before {
+  content: '♡';
+  animation: heart-pulse 2s forwards ease-in-out;
+}
+
+.animated-heart::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 10%;
+  width: 130%;
+  height: 1.5px;
+  background-color: #f1c40f;
+  transform: rotate(-20deg) scaleX(0);
+  transform-origin: bottom left;
+  animation: slash-draw 2.5s forwards ease-in-out;
+}
+
+@keyframes heart-pulse {
+
+  0%,
+  30% {
+    content: '♡';
+  }
+
+  40%,
+  100% {
+    content: '♥';
+  }
+}
+
+@keyframes slash-draw {
+
+  0%,
+  30% {
+    transform: rotate(-20deg) scaleX(0);
+  }
+
+  100% {
+    transform: rotate(-20deg) scaleX(1);
+  }
+}

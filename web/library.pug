@@ -1,0 +1,25 @@
+extends layout/page
+
+block body
+  main
+    h1 × The Library
+    p.intro We read. A lot. During our combined decades in the industry, we’ve acquired a massive collection of books that shaped our engineering culture, our code, and our philosophy. If you want to understand how we think, read what we read.
+
+    blockquote
+      strong Full disclosure
+      | The links below are affiliate links. If you buy a book, you help buy us a coffee
+      .animated-heart
+
+    codin-library(data="library.json")
+
+    hr
+    h4 Think we are missing a masterpiece?
+    .cta-wrap
+      a.cta(href="mailto:hey@codin.gg")
+        | hey@codin.gg
+        span.cta-arrow →
+    br
+    br
+
+block head
+  script(type="module" src="codin-library.js")
